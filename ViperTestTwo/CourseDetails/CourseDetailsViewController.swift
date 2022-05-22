@@ -28,6 +28,7 @@ class CourseDetailsViewController: UIViewController {
     @IBAction func toggleFavorite(_ sender: UIButton) {
         isFavorite.toggle()
         setStatusForFavoriteButton()
+        DataManager.shared.setFavoriteStatus(for: course.name, with: isFavorite)
     }
     
     private func setupUI() {
@@ -35,8 +36,19 @@ class CourseDetailsViewController: UIViewController {
         numberOfLessonsLabel.text = "Number of lessons: \(course.numberOfLessons)"
         numberOfTestsLabel.text = "Number of tests: \(course.numberOfTests)"
         
+        if let imageData = ImageManager.shared.fetchImageData(from: course.imageUrl) {
+            courseImage.image = UIImage(data: imageData)
+        }
               
         setStatusForFavoriteButton()
+    }
+    
+    private func setStatusForFavoriteButton() {
+        favoriteButton.tintColor = isFavorite ? .red : .gray
+    }
+    
+    private func loadFavoriteStatus() {
+        isFavorite = DataManager.shared.getFavoriteStatus(for: course.name)
     }
 }
 
