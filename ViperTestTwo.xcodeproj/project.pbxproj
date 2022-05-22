@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		6C8164E9283A2F47003A8478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8164E8283A2F47003A8478 /* AppDelegate.swift */; };
 		6C8164EB283A2F47003A8478 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8164EA283A2F47003A8478 /* SceneDelegate.swift */; };
-		6C8164ED283A2F47003A8478 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8164EC283A2F47003A8478 /* ViewController.swift */; };
 		6C8164F0283A2F47003A8478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C8164EE283A2F47003A8478 /* Main.storyboard */; };
 		6C8164F2283A2F4A003A8478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C8164F1283A2F4A003A8478 /* Assets.xcassets */; };
 		6C8164F5283A2F4A003A8478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C8164F3283A2F4A003A8478 /* LaunchScreen.storyboard */; };
+		6C8164FE283A2FDC003A8478 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8164FD283A2FDC003A8478 /* CourseDetailsViewController.swift */; };
+		6C816500283A2FE5003A8478 /* CourseDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8164FF283A2FE5003A8478 /* CourseDetailsPresenter.swift */; };
+		6C816502283A2FED003A8478 /* CourseDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C816501283A2FED003A8478 /* CourseDetailsInteractor.swift */; };
+		6C816504283A2FFE003A8478 /* CourseDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C816503283A2FFE003A8478 /* CourseDetailsConfigurator.swift */; };
+		6C816507283A30A2003A8478 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C816506283A30A2003A8478 /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6C8164E5283A2F47003A8478 /* ViperTestTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperTestTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C8164E8283A2F47003A8478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C8164EA283A2F47003A8478 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6C8164EC283A2F47003A8478 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6C8164EF283A2F47003A8478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C8164F1283A2F4A003A8478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C8164F4283A2F4A003A8478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C8164F6283A2F4A003A8478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C8164FD283A2FDC003A8478 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
+		6C8164FF283A2FE5003A8478 /* CourseDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsPresenter.swift; sourceTree = "<group>"; };
+		6C816501283A2FED003A8478 /* CourseDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsInteractor.swift; sourceTree = "<group>"; };
+		6C816503283A2FFE003A8478 /* CourseDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsConfigurator.swift; sourceTree = "<group>"; };
+		6C816506283A30A2003A8478 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		6C8164E7283A2F47003A8478 /* ViperTestTwo */ = {
 			isa = PBXGroup;
 			children = (
+				6C816505283A308E003A8478 /* Models */,
+				6C8164FC283A2FC1003A8478 /* CourseDetails */,
 				6C8164E8283A2F47003A8478 /* AppDelegate.swift */,
 				6C8164EA283A2F47003A8478 /* SceneDelegate.swift */,
-				6C8164EC283A2F47003A8478 /* ViewController.swift */,
 				6C8164EE283A2F47003A8478 /* Main.storyboard */,
-				6C8164F1283A2F4A003A8478 /* Assets.xcassets */,
 				6C8164F3283A2F4A003A8478 /* LaunchScreen.storyboard */,
+				6C816508283A30BC003A8478 /* Resources */,
 				6C8164F6283A2F4A003A8478 /* Info.plist */,
 			);
 			path = ViperTestTwo;
+			sourceTree = "<group>";
+		};
+		6C8164FC283A2FC1003A8478 /* CourseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				6C8164FD283A2FDC003A8478 /* CourseDetailsViewController.swift */,
+				6C8164FF283A2FE5003A8478 /* CourseDetailsPresenter.swift */,
+				6C816501283A2FED003A8478 /* CourseDetailsInteractor.swift */,
+				6C816503283A2FFE003A8478 /* CourseDetailsConfigurator.swift */,
+			);
+			path = CourseDetails;
+			sourceTree = "<group>";
+		};
+		6C816505283A308E003A8478 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6C816506283A30A2003A8478 /* Course.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6C816508283A30BC003A8478 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6C8164F1283A2F4A003A8478 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C8164ED283A2F47003A8478 /* ViewController.swift in Sources */,
+				6C816504283A2FFE003A8478 /* CourseDetailsConfigurator.swift in Sources */,
+				6C816507283A30A2003A8478 /* Course.swift in Sources */,
 				6C8164E9283A2F47003A8478 /* AppDelegate.swift in Sources */,
+				6C8164FE283A2FDC003A8478 /* CourseDetailsViewController.swift in Sources */,
+				6C816500283A2FE5003A8478 /* CourseDetailsPresenter.swift in Sources */,
+				6C816502283A2FED003A8478 /* CourseDetailsInteractor.swift in Sources */,
 				6C8164EB283A2F47003A8478 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
