@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01c-la-VTr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Course List View Controller-->
+        <!--Courses-->
         <scene sceneID="gXT-kp-Pf0">
             <objects>
                 <viewController id="vyw-zo-nSc" customClass="CourseListViewController" customModule="ViperTestTwo" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CourseCell" id="xc7-00-mdx" customClass="CourseTableViewCell" customModule="ViperTestTwo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CourseCell" id="xc7-00-mdx" customClass="CourseCellView" customModule="ViperTestTwo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xc7-00-mdx" id="88y-aG-sYz">
@@ -44,10 +44,10 @@
                             <constraint firstItem="zzQ-le-aV2" firstAttribute="leading" secondItem="q4w-h9-0za" secondAttribute="leading" id="pjd-Dd-lqT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="jCB-or-7Pc"/>
+                    <navigationItem key="navigationItem" title="Courses" id="jCB-or-7Pc"/>
                     <connections>
                         <outlet property="tableView" destination="zzQ-le-aV2" id="Og6-Yo-uHe"/>
-                        <segue destination="55f-tH-EUx" kind="show" id="QYP-hu-0bP"/>
+                        <segue destination="55f-tH-EUx" kind="show" identifier="ShowDetails" id="QYP-hu-0bP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3CW-X2-7OY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -62,6 +62,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hOj-IQ-QcG">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="tintColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -81,13 +89,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2-courselogo" translatesAutoresizingMaskIntoConstraints="NO" id="5wY-8F-dNG">
-                                <rect key="frame" x="34" y="260" width="345" height="203"/>
+                                <rect key="frame" x="34" y="208" width="345" height="203"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="203" id="FsO-OZ-Eqz"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9aL-7G-sUs">
-                                <rect key="frame" x="34" y="511" width="345" height="61"/>
+                                <rect key="frame" x="34" y="459" width="345" height="61"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of lessons: 45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kh1-0Q-wba">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="20.5"/>
@@ -104,13 +112,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фреймворк для создания игр SpriteKit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFd-NK-dvv">
-                                <rect key="frame" x="20" y="179" width="374" height="54"/>
+                                <rect key="frame" x="20" y="127" width="374" height="54"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yl-in-Eui">
-                                <rect key="frame" x="319" y="403" width="60" height="60"/>
+                                <rect key="frame" x="319" y="351" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="CS3-jn-Mrk"/>
                                     <constraint firstAttribute="width" constant="60" id="DTk-UC-3I0"/>
@@ -141,7 +149,7 @@
                             <constraint firstItem="9aL-7G-sUs" firstAttribute="trailing" secondItem="5wY-8F-dNG" secondAttribute="trailing" id="lUq-9C-MR3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8it-AB-26q"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="8it-AB-26q"/>
                     <connections>
                         <outlet property="courseImage" destination="5wY-8F-dNG" id="D8x-65-sqf"/>
                         <outlet property="courseNameLabel" destination="iFd-NK-dvv" id="KsP-pb-Yyw"/>
@@ -160,6 +168,9 @@
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
